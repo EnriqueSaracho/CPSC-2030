@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div Sections</title>
+    <style>
+      div {
+        border: 6px solid black;
+        padding: 20px;
+        margin: 10px;
+        font-size: 24px;
+        text-align: center;
+      }
+      div div {
+        border: 6px solid red;
+      }
+      #parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      #child-A {
+        grid-column: 2 / span 2;
+        grid-row: 1 / 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="child-A">A</div>
+      <div id="child-B">B</div>
+      <div id="child-C">C</div>
+      <div id="child-D">D</div>
+    </div>
+  </body>
+</html>

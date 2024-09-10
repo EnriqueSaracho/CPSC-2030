@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Café Aroma - The Best Coffee in Town</title>
+    <style>
+        /* Universal selector */
+        * {
+            font-family: Arial, sans-serif;
+            color: #2c3e50;
+        }
+        /* Descendant selector */
+        .menu .item {
+            color: brown;
+            margin-left: 20px;
+        }
+        /* Child selector */
+        .menu > .item {
+            background-color: lightyellow;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            color: darkgreen;
+        }
+        /* adjacent sibling selector */
+        h2 + p {
+            color: #16a085;
+        }
+        /* general sibling selector */
+        h2 ~ p {
+            font-style: italic;
+        }
+        /* attribute selector */
+        [data-price] {
+            text-decoration: underline;
+        }
+        /* attribute selector with value */
+        [data-category="popular"] {
+            font-weight: bold;
+        }
+        /* attribute selector that contains value */
+        [data-price*="mid"] {
+            font-style: italic;
+        }
+        /* attribute selector starts with value */
+        [data-name^="Espresso"] {
+            text-transform: uppercase;
+        }
+        /* attribute selector ends with value */
+        [data-name$="Blend"] {
+            font-size: 0.8em;
+        }
+        /* nth-of-type selector */
+        p:nth-of-type(2) {
+            color: purple;
+        }
+        /* nth-of-type selector with formula */
+        p:nth-of-type(2n + 1) {
+            background-color: lightgreen;
+        }
+        /* first-of-type selector */
+        p:first-of-type {
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Café Aroma</h1>
+        <p>Your perfect spot for coffee, tea, and treats</p>
+    </header>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>At Café Aroma, we believe in quality and passion.</p>
+        <p>Our coffee is sourced from the finest beans around the world.</p>
+        <p>Come and experience the best coffee in town.</p>
+    </section>
+
+    <section class="menu">
+        <h2>Our Menu</h2>
+
+        <div class="item" data-category="popular" data-name="Espresso Classic" data-price="mid">
+            Espresso Classic - $2.50
+            <div class="item">Single Shot</div>
+            <div class="item">Double Shot</div>
+        </div>
+
+        <div class="item" data-category="none" data-name="Espresso Macchiato" data-price="mid">
+            Espresso Macchiato - $3.00
+            <div class="item">With Foam</div>
+            <div class="item">Extra Hot</div>
+        </div>
+
+        <div class="item" data-category="none" data-name="Cappuccino Blend" data-price="premium">
+            Cappuccino Blend - $4.00
+            <div class="item">With Cinnamon</div>
+            <div class="item">Extra Creamy</div>
+        </div>
+
+        <div class="item" data-category="seasonal" data-name="Latte Delight" data-price="premium">
+            Pumpkin Spice Latte - $3.50
+            <div class="item">Extra Cinnamon</div>
+            <div class="item">Extra Creamy</div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <p>The best coffee I've ever had!</p>
+        <p>Great atmosphere and friendly staff.</p>
+        <p>The cappuccino blend is simply amazing!</p>
+        <p>Espresso Classic is my go-to drink every morning.</p>
+    </section>
+
+</body>
+</html>
