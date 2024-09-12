@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Picture Grid</title>
+    <style>
+      body {
+        margin: 0px 100px 0px 100px;
+        background-color: #f0f0f0;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+      }
+      .original {
+        background-color: pink;
+      }
+      .original img {
+        width: 100%;
+        height: 100%;
+      }
+      #Dog1 {
+        transform: scale(0.75);
+        /* transform: scaleX(0.75); */
+        /* transform: scaleY(0.75); */
+      }
+      #Dog2 {
+        transform: rotate(45deg);
+        /* transform: rotate(-45deg); */
+        /* transform: rotate(370deg); */
+      }
+      #Dog3 {
+        transform: translate(100px);
+        /* transform: translate(100px, 100px); */
+        /* transform: translateX(100px) translateY(100px); */
+        /* transform: translate(-100px); */
+        /* transform: translateY(100px); */
+      }
+      #Dog4 {
+        transform: skew(5deg, -20deg);
+      }
+      #Dog5 {
+        transform: scale(0.75) rotate(25deg) translate(50px);
+      }
+      #Dog6 {
+        transform: translateY(-75px) scaleX(0.5);
+      }
+      #Dog7 {
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        transition-delay: 1s 0s;
+        transform: scale(1);
+      }
+      #Dog7:hover {
+        transform: scale(1.2);
+      }
+      #Dog8 {
+        transition: transform 2s linear 0.5s;
+      }
+      #Dog8:hover {
+        transform: rotate(360deg);
+      }
+      #Dog9 {
+        position: relative;
+        animation: moveRight 3s ease-in-out 3;
+      }
+      @keyframes moveRight {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: 200px;
+        }
+        100% {
+          left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transform Images</h1>
+
+    <div class="grid-container">
+      <div class="original">
+        <img src="https://placedog.net/400/400" alt="Dog 1" id="Dog1" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/401/400" alt="Dog 2" id="Dog2" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/402/400" alt="Dog 3" id="Dog3" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/403/400" alt="Dog 4" id="Dog4" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/404/400" alt="Dog 5" id="Dog5" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/405/400" alt="Dog 6" id="Dog6" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/406/400" alt="Dog 7" id="Dog7" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/407/400" alt="Dog 8" id="Dog8" />
+      </div>
+      <div class="original">
+        <img src="https://placedog.net/408/400" alt="Dog 9" id="Dog9" />
+      </div>
+    </div>
+  </body>
+</html>

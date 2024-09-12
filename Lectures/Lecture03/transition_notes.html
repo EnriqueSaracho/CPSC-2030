@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transitions</title>
+
+	<style>
+		
+	* 
+	{
+		box-sizing: border-box;
+	}
+
+	body 
+	{
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+	a {
+		display: inline-block;
+		border:4px solid blue;
+		padding:1rem;
+
+		text-decoration: none;
+
+		
+	}
+
+	/*A.	Same Animation for Mouse On and Mouse Off*/
+
+	a.A 
+	{
+		transition:color 1s;
+	}
+
+	a.A:hover 
+	{
+		color:red;
+	}
+
+	/*B.	Different Animation for Mouse On and Mouse Off*/
+
+	a.B 
+	{
+		/*Mouse off*/
+		transition:color .5s;
+	}
+
+	a.B:hover 
+	{
+		color:red;
+		/*Mouse on*/
+		transition:color 2s;
+	}
+
+	/*C.	Animating More than One property*/
+
+	a.C 
+	{
+		transition:color .5s, background-color 4s;
+	}
+
+	a.C:hover 
+	{
+		color:red;
+		background-color: pink;
+	}
+
+	a.C2 
+	{
+		transition:all 1s;
+	}
+
+	a.C2:hover 
+	{
+		color:red;
+		background-color: pink;
+	}
+
+	/*D.	Animating One Property at a Time*/
+
+	a.D 
+	{
+		transition:color 1.5s, background-color 1s 1.5s;
+	}
+
+	a.D:hover 
+	{
+		color:red;
+		background-color: pink;
+	}
+
+	/*E.	Some Notes on Animating Menu Transitions*/
+
+	nav 
+	{
+		padding:1rem;
+
+		display: inline-block;
+
+		background-color: coral;
+		color:white;
+
+		text-align: center;
+	}
+	
+	.menu
+	{
+		margin:0;
+		padding:0;
+		list-style-type: none;
+
+		/*Use visibility:hidden to hide the content from screen readers*/
+		visibility: hidden;
+
+		height:0;
+		opacity: 0;
+
+		/*Mouse off*/
+		transition:opacity .5s, height .5s .5s, visibility 0s 1s;
+		/*We want the visibility to change to hidden AFTER the other property values have finished transitioning. */
+	}
+
+	nav:hover .menu 
+	{
+		visibility: visible;
+
+		height:10rem;
+		opacity: 1;
+
+		/*Mouse on*/
+		transition:height .5s, opacity .5s .5s;
+		/*The height of the element grows, THEN the opacity increases. We don't need to animate the visibility here because it will change BEFORE the other properties by default.*/
+	}
+
+	</style>
+</head>
+<body>
+	
+	<h1>Transitions</h1>
+
+		<h2>A.	Same Animation for Mouse On and Mouse Off</h2>
+			<a href="#" class="A">Link A</a>
+
+		<h2>B.	Different Animation for Mouse On and Mouse Off</h2>
+			<a href="#" class="B">Link B</a>
+
+		<h2>C.	Animating More than One property</h2>
+			<a href="#" class="C">Link C</a>
+
+			<a href="#" class="C2">Link C2</a>
+
+		<h2>D.	Animating One Property at a Time</h2>
+			<a href="#" class="D">Link D</a>
+
+		<h2>E.	Some Notes on Animating Menu Transitions</h2>
+			<nav>
+				Menu
+				<ul class="menu">	
+					<li><a href="#">Menu Item 1</a></li>
+					<li><a href="#">Menu Item 2</a></li>
+				</ul>
+			</nav>
+	
+
+</body>
+</html>
