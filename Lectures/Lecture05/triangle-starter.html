@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draw a Triangle</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .triangle-output {
+        font-family: monospace;
+        margin-top: 20px;
+      }
+      #output {
+        display: block;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>Draw a Triangle</h1>
+    <p>Enter the height of the triangle:</p>
+    <input
+      type="number"
+      id="triangleHeight"
+      min="1"
+      placeholder="Enter height"
+    />
+    <button onclick="drawTriangle()">Draw Triangle</button>
+    <button id="toggleBtn">Show/Hide Triangle</button>
+
+    <div class="triangle-output" id="output"></div>
+
+    <!-- Embedded JS -->
+    <script>
+      $(document).ready(function () {
+        $("#toggleBtn").click(function () {
+          $("#output").toggle();
+        });
+      });
+
+      function drawTriangle() {
+        const height = document.getElementById("triangleHeight").value;
+        let triangle = "";
+        for (let i = 1; i <= height; i++) {
+          for (let j = 1; j <= i; j++) {
+            triangle += "*";
+          }
+          triangle += "<br>";
+        }
+        document.getElementById("output").innerHTML = triangle;
+      }
+    </script>
+  </body>
+</html>
