@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Row Wrapping Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #ddd;
+        padding: 10px;
+        border: 2px solid #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .box {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        flex-basis: 200px; /* Orientation depends on flex-direction */
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+      }
+      .box2 {
+        flex-grow: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox Row Wrapping</h1>
+
+    <div class="container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+      <div class="box">Box 7</div>
+      <div class="box">Box 8</div>
+      <div class="box">Box 9</div>
+    </div>
+  </body>
+</html>
