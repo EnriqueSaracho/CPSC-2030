@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Menu</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      nav {
+        margin: 20px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:focus {
+        outline: 2px solid #0056b3;
+      }
+
+      /* Menu styling */
+      ul[role="menu"] {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none; /* Hidden by default */
+      }
+
+      ul[role="menu"] li {
+        padding: 10px;
+      }
+
+      ul[role="menu"] li a {
+        text-decoration: none;
+        color: #007bff;
+        display: block;
+      }
+
+      ul[role="menu"] li:hover {
+        background-color: #e0e0e0;
+      }
+
+      /* Form styling */
+      main {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      label {
+        font-size: 16px;
+      }
+
+      input[type="text"],
+      input[type="radio"] {
+        margin-right: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+      }
+      .radio-group {
+        padding: 5px;
+      }
+
+      .submit-btn {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .submit-btn:focus {
+        outline: 2px solid #1e7e34;
+      }
+
+      /* Focus styles for accessibility */
+      input[type="radio"]:focus + label {
+        outline: 2px solid #007bff;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button
+        id="menubutton"
+        aria-haspopup="true"
+        aria-controls="menu2"
+        aria-expanded="false"
+      >
+        Main Menu
+      </button>
+      <ul id="menu2" role="menu" aria-labelledby="menubutton">
+        <li role="menuitem"><a href="#">Home</a></li>
+        <li role="menuitem"><a href="#">About</a></li>
+        <li role="menuitem"><a href="#">Services</a></li>
+        <li role="menuitem"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main section with form -->
+    <main>
+      <h2>Survey Form</h2>
+      <form
+        id="surveyForm"
+        action="#"
+        aria-label="Survey of school information"
+      >
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="studentId">Student ID:</label>
+          <input type="text" id="studentId" name="studentId" required />
+        </div>
+        <fieldset>
+          <legend>Select your school</legend>
+          <div class="radio-group">
+            <input type="radio" id="ubc" name="school" value="ubc" />
+            <label for="ubc">University of British Columbia</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="sfu" name="school" value="sfu" />
+            <label for="sfu">Simon Fraser University</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="langara" name="school" value="langara" />
+            <label for="langara">Langara College</label>
+          </div>
+        </fieldset>
+        <button type="submit" class="submit-btn" aria-label="Submit">
+          Submit
+        </button>
+      </form>
+    </main>
+
+    <script>
+      $(function () {
+        // Initially hide the menu
+        $("#menu2").hide();
+
+        // Toggle menu visibility on button click
+        $("#menubutton").click(function () {
+          var isExpanded = $(this).attr("aria-expanded") === "true";
+
+          // Toggle aria-expanded
+          $(this).attr("aria-expanded", !isExpanded);
+
+          // Show or hide the menu with a smooth slide toggle effect
+          $("#menu2").toggle();
+        });
+
+        $("#surveyForm").on("submit", function (event) {
+          event.preventDefault();
+
+          var name = $("#name").val();
+          var studentId = $("#studentId").val();
+          var school = $('input[name="school"]:checked').next("label").text();
+
+          var message = `Please confirm your infomration:\n
+          Name: ${name}\n
+          Student ID: ${studentId}\n
+          School: ${school}\n
+          Do you want to submit?`;
+
+          if (confirm(message)) {
+            this.submit();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
