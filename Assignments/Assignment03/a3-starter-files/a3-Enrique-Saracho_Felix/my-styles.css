@@ -1,0 +1,4 @@
+.sticky-border {
+  border-bottom: 2px solid tomato;
+  transition: 0.5s ease-out;
+}
