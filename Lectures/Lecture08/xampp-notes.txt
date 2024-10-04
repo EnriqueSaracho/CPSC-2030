@@ -1,0 +1,9 @@
+- Go to https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/
+- Download xampp-portable-windows-x64-8.2.12-0-VS16.7z 
+- Extract the files from the download to your Documents folder on the C drive (this may take several minutes)
+- Run the setup_xampp.bat file
+- Open the control panel with xamp-control.exe
+- Start the Apache server by clicking the "Start" button
+- Create a new folder in Documents/xampp/htdocs called testing
+- Create a new file index.php in the testing folder
+- In a web browser go to: localhost/testing/index.php
