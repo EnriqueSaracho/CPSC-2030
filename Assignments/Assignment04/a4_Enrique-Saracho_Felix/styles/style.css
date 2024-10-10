@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Montserrat:300,400,500,700|Nunito:300,400,600,700');
+
+    html
+    {
+      font-family: Montserrat;
+      font-weight: 300;
+    }
+
+    #image-gallery
+    {
+      	background-color: lightseagreen;
+    }
+
+    h1
+    {
+      font-family: "nunito";
+      color:slateblue;
+      font-size: 6rem;
+      padding:1rem;
+      background-image: repeating-linear-gradient(-45deg,transparent,transparent 4px,rgba(106, 90, 205, .4) 4px,rgba(106, 90, 205, .4) 7px);
+      opacity: .8;
+      box-shadow: 10px 10px 0 slateblue;
+
+    }
+
+    header
+    {
+      box-sizing: border-box;
+    }
+
+    body
+    {
+      background-color: aquamarine;
+    }
+
+    .wrapper
+    {
+      max-width: 1200px;
+      margin:auto;
+    }
+
+    main
+    {
+      box-sizing: border-box;
+      background-color: lightseagreen;
+      border: lightseagreen 15px solid;
+      border-radius: 20px;
+    }
+
+    .expand{
+	display: none;
+	position:fixed;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,.8);
+	height:100vh;
+	width:100vw;
+	text-align: center;
+    }
+
+    .expand img{
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+    }
