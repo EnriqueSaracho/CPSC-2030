@@ -1,0 +1,98 @@
+// CSS Selectors
+div p {} // descendant selector
+div > p {} // child selector
+h1 + p {} // sibling selector  
+h1 ~ p {} // general sibling selector
+[data-name^=”Espresso”] {} // attribute selector starts with value
+[data-name$=”Espresso”] {} // attribute selector ends with value
+p:nth-of-type(2n + 1) {} // nth-of-type selector with formula
+p:first-of-type {} // first-of-type selector
+div:nth-child(3) {} // nth-child selector
+div:nth-last-child(2) {} // nth-last-child selector
+a:link {} // yet to be clicked on
+a:visited {} // already clicked on
+input[type=radio]:checked {} // for radio btns and checkboxes
+div:not(#container) {} // negation pseudo class
+p::first-letter {} // pseudo elements
+
+//HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style></style>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+  </body>
+</html>
+
+// Grid Layout
+display: grid;
+grid-template-columns: 20% 20% 20% 20% 20%; = grid-template-columns: repeat(5, 1fr);
+grid-template-rows: 20% 20% 20% 20% 20%;
+grid-column-start: 3; grid-column-end: 4; grid-column-end: span 2; grid-column: 3/4; grid-column: 2 / span 3
+grid-rows-tart: 3;
+grid-area: 1 / 2 / 4 / 6; // row-start / column-start / row-end / column-end
+order: 0;
+
+// CSS Transform
+transform: scale(0.75); transform: scaleX(0.75); transform: scaleY(0.75);
+transform: rotate(45deg); transform: rotate(-45deg);
+transform: translate(100px); transform: translate(100px, 100px); transform: translateX(100px) translateY(100px);
+transform: skew(5deg, -20deg);
+transform: scale(0.75) rotate(25deg) translate(50px);
+
+transition-property: transform; // or transition: transform 1s ease-in 1s;
+transition-duration: 1s;
+transition-timing-function: ease-in;
+transition-delay: 1s;
+transform: scale(1); // div:hover {transform: scale(1.2);}
+
+animation: moveRight 3s ease-in-out 3; // 3 repetitions
+@keyframes moveRight { 0% {left: 0;} 100% {left: 200px;} }
+
+for(let yr of years) // for each loop
+let { id, title } = photo; // photo = { id: 1, title: "Central Library" }
+function concatenate(...args) // rest operator
+
+var node = $(#id).attr("href"); // $("*") $("tag") $(.class)
+$(#id).attr("href", "https//...");
+$(#id).css("color", "red");
+$("body *:contains('warning')")
+$(document).ready(function() {
+    $(".class").on("mousemove", function() {};).on("click", function() {};)
+})
+$("img").toggle(); // turns on and off
+$("img").hide(); $("img").show(); $("img").animate({left: '250px'}, 1000);
+var link = $('<a></a>'); // Creating a node
+$("div").append(link); // link.appendTo($("div"));
+$("div").prepend(link); // link.prependTo($("div"));
+$("div").before(link); // link.insertBefore($("div"));
+$("div").after(link); // link.insertAfter($("div"));
+$("p").wrap('<div class="container"></div>'); // wrapping elements
+// Selecting elements: next(), prev(), parent(), closest("selector"), children()
+
+aria-haspopup="true"
+aria-controls="menu2" // menu2 is id
+role="menu" // unordered list works as a menu
+aria-labelledby="menubutton"
+aria-hidden="true"
+tabindex="0" // makes tag focusable
+
+$user = "Ricardo";
+echo "hello ".$user;
+define("DATABASE_LOCAL", "localhost"); // declaring constants
+<?php if($user == "Ricardo") : ?> // alternate syntax
+<?php else if : ?> <?php endif; ?>
+include "file.php"; require "file.php"; include_once "";
+function getTime(&$seconds=0) :string {}
+global $count // making a block scope variable global
+$days = array("", "", "", ""); $days = ["", "", "", ""]
+foreach($forecast as $key => $value) {echo $value} // for each loop
+unset($days[2]) // deleting value from array
+isset($days[2]) // checking if value has been set
+sort($days) // sorts alphabetically asort($days) // keeps the associations between keys and values
+print_r($days) // prints array
