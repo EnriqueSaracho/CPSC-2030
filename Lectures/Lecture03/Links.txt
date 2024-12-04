@@ -1,5 +1,0 @@
-CSS Transitions:
-https://www.joshwcomeau.com/animation/css-transitions/
-
-CSS Animation Examples:
-https://blog.hubspot.com/website/css-animation-examples

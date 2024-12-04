@@ -1,5 +1,0 @@
-SQL Island Game:
-https://sql-island.informatik.uni-kl.de/
-
-SQL Island Game Solutions:
-https://datalemur.com/blog/sql-island-in-english-answers

@@ -2,42 +2,33 @@
 
 ## Contents
 
-### CSS
-
 Week 1
-- Selectors
-- Grid layout
-- Transform
-- Transitions
-- Animations
+- CSS Selectors
+
+Week 2
+- CSS Grid layout
+- CSS Transform
+- CSS Transitions
+- CSS Animations
+
+Week 3
+- JavaScript Fundamentals
+- jQuery Foundations
+
+Week 4
 - Flex box
+- Aria and Accessibility
 
-### JavaScript
+Week 5
+- PHP - Server-Side Development
+- XAMPP
 
-- Variables and Data Types
-- JavaScript Output
-- Primitive Types
-- Conditionals
-- Loops
-- Arrays
-- Objects
-- Functions
-- Block / Global / Local Scopes
-- Document Object Model (DOM)
+Week 6
+- Form Validation
+- Regular Expressions
 
-## JQuery
-- $() function
-- Selectors
-- Content filter selection
-- Element manipulations
-    - HTML attributes
-    - Changing CSS
-- Event Handling
-    - Binding and Unbinding Events
-    - Page Loading
-- Effects and Animation
-    - Toggling
-    - Hidding/Showing
-    - Styling/Animation
-- DOM Manipulation
-    - Creating nodes
+Week 8
+- SQL
+
+Week 9
+- Wordpress
