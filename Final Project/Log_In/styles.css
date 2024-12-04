@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: rgb(43, 125, 201);
+    --hover-color: rgb(84, 145, 202);
+    --active-color: rgb(32, 93, 150);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    border-bottom: 3px solid gray;
+    margin: 0 5%;
+}
+
+.title {
+    padding: 30px 0 8px 0;
+}
+
+.subtitle {
+    padding-bottom: 30px;
+    font-weight: 300;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.15em;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--hover-color);
+}
+.btn:active {
+    background-color: var(--active-color);
+}
+
+.acc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 35px;
+}
+
+.acc-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.acc-view {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.acc-view:hover {
+    background-color: var(--hover-color);
+}
+.acc-view:active {
+    background-color: var(--active-color);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30%;
+    gap: 10px;
+}
+
+.form-input {
+    padding: 5px;
+    width: 100%;
+}
