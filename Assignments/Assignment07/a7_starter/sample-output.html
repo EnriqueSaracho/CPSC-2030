@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 7</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <h1>Assignment 7: SQL</h1>
+
+    <div class="write-comment">
+      <h2>Post a Comment</h2>
+
+      <form action="index.php" method="post">
+
+        <label>
+          Email Address:
+          <input type="email" name="email">
+        </label>
+
+        <label>
+          Mood:
+          <select name="mood">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="excited">Excited</option>
+            <option value="bored">Bored</option>
+            <option value="angry">Angry</option>
+          </select>
+        </label>
+
+        <label>
+          Enter a Comment:
+          <textarea name="comment"></textarea>
+        </label>
+
+        <button type="submit" name="button">Post Comment</button>
+
+      </form>
+    </div>
+
+    <div class='comments'><h2>Comments</h2>
+  <div class="comment">
+
+    <div class="ID">
+      Post ID: 3    </div>
+
+    <div class="date">
+        Posted on: 2018-02-26    </div>
+
+    <h3>New comment by: whale@chickens.bee</h3>
+
+    <div class="mood">
+      Current mood: bored    </div>
+
+    <div class="comment-text">
+      <p>he word "whale" comes from the Old English whæl, related to the High German wal. Related forms are the Old Norse hvalr and the Swedish/Danish hval. The obsolete "whalefish" has a similar derivation, indicating a time when whales were thought to be fish. Other archaic English forms include wal, wale, whal, whalle, whaille, wheal, etc.[2]</p>    </div>
+
+  </div>
+
+
+  <div class="comment">
+
+    <div class="ID">
+      Post ID: 2    </div>
+
+    <div class="date">
+        Posted on: 2018-02-26    </div>
+
+    <h3>New comment by: jordan@langara.ca</h3>
+
+    <div class="mood">
+      Current mood: excited    </div>
+
+    <div class="comment-text">
+      <p>From Wikipedia, the free encyclopedia<br>This article is about the group of flying insects. For other uses, see Bee (disambiguation).<br>"Anthophila" redirects here. For the moth genus, see Anthophila (moth).</p><p>Bees are flying insects closely related to wasps and ants, known for their role in pollination and, in the case of the best-known bee species, the European honey bee, for producing honey and beeswax. Bees are a monophyletic lineage within the superfamily Apoidea and are presently considered a clade, called Anthophila. There are nearly 20,000 known species of bees in seven recognized biological families.[1][2] They are found on every continent except Antarctica, in every habitat on the planet that contains insect-pollinated flowering plants.</p>    </div>
+
+  </div>
+
+
+  <div class="comment">
+
+    <div class="ID">
+      Post ID: 1    </div>
+
+    <div class="date">
+        Posted on: 2018-02-26    </div>
+
+    <h3>New comment by: jordan@langara.ca</h3>
+
+    <div class="mood">
+      Current mood: happy    </div>
+
+    <div class="comment-text">
+      <p>From Wikipedia, the free encyclopedia<br>For chickens as food, see Chicken (food). For the broader species of which chickens form a subspecies, see Red junglefowl. For other uses, see Chicken (disambiguation), Chooks (disambiguation), or Red junglefowl.</p><p>The chicken (Gallus gallus domesticus) is a type of domesticated fowl, a subspecies of the red junglefowl. It is one of the most common and widespread domestic animals, with a total population of more than 19 billion as of 2011.[1] Humans commonly keep chickens as a source of food (consuming both their meat and eggs) and, more rarely, as pets.</p>    </div>
+
+  </div>
+
+</div><div class='commenters'><h2>People Who have Commented:</h2><ul><li><a href='index.php?filter=jordan@langara.ca'>jordan@langara.ca</a></li><li><a href='index.php?filter=whale@chickens.bee'>whale@chickens.bee</a></li></ul></div>
+  </body>
+</html>
